@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   .pallet-comparison-section {
+    background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
+  }
+
+  .comparison-card {
+    transition: all 0.3s ease;
+  }
+
+  .comparison-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .comparison-card h4 {
+    letter-spacing: 0.5px;
+  }
+
+  .comparison-card ul li {
+    font-size: 1rem;
+    color: #444;
+  }
+
+  @media (max-width: 991px) {
+    .comparison-card {
+      text-align: left;
+    }
+  }
+
+  .product-card {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 85, 255, 0.15);
+}
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  background-color: #001f3f;
+}
+.product-img img {
+  max-height: 200px;
+  object-fit: contain;
+}
+.section-header h2 {
+  font-size: 2rem;
+  color: #004aad;
+}
+.btn-outline-primary {
+  border-color: #004aad;
+  color: #004aad;
+}
+.btn-outline-primary:hover {
+  background-color: #004aad;
+  color: #fff;
+}
+
+ .benefit-card {
+    transition: all 0.4s ease;
+    border: 1px solid #e5e5e5;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+  }
+
+  .benefit-card .icon i {
+    transition: transform 0.4s ease;
+  }
+
+  .benefit-card:hover .icon i {
+    transform: scale(1.2);
+    color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .benefit-card {
+      padding: 1.5rem;
+    }
+  }
+
+  
+  .process-section {
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  }
+
+  .process-steps {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .process-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-step .circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #fff;
+    border: 8px solid transparent;
+    background-image: linear-gradient(#fff, #fff), 
+      linear-gradient(45deg, #007bff, #00b4d8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .process-step .circle h6 {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #003366;
+    padding: 0 10px;
+  }
+
+  .process-step:hover .circle {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 91, 187, 0.3);
+  }
+
+  .process-step .arrow {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: url('https://cdn-icons-png.flaticon.com/512/545/545682.png') center/contain no-repeat;
+    filter: hue-rotate(190deg) brightness(1.1);
+    opacity: 0.7;
+  }
+
+  .process-step:last-child .arrow {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    .process-step .circle {
+      width: 110px;
+      height: 110px;
+    }
+
+    .process-step .arrow {
+      right: -35px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .process-steps {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .process-step .arrow {
+      display: none;
+    }
+
+    .process-step .circle {
+      width: 120px;
+      height: 120px;
+    }
+  }
+</style>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MIPS - My Pooling Solutions</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="https://mipsplastics.in/img/marine-logo-white.png" rel="icon" />
+  <link href="https://mipsplastics.in/img/marine-logo-white.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="about-page">
+
+      <!-- Bootstrap 5 CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+ <!-- Header -->
+<header id="header" class="header sticky-top bg-white shadow-sm">
+  <!-- Topbar -->
+  <div class="topbar py-1" style="background-color:#0d6efd;">
+    <div class="container d-flex flex-wrap justify-content-center justify-content-md-between align-items-center text-white small">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope me-2"></i>
+        <a href="mailto:info@mipsplastics.in" class="text-white text-decoration-none me-4">info@mipsplastics.in</a>
+        <i class="bi bi-phone me-2"></i>
+        <span>+91 98846 88855</span>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="text-white ms-3"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/MIPS LOGO (229 x 67 px) (1).png" alt="MIPS Plastics" width="110">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-1 text-primary"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+        <ul class="navbar-nav align-items-center me-lg-4">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="whymips.html">Why MIPS?</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="plasticvswooden.html">Plastic vs Wooden Pallets</a></li>
+          <li class="nav-item"><a class="nav-link" href="investor.html">Investor Room</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Buttons side by side -->
+        <div class="d-flex align-items-center">
+          <a href="contactus.html" class="btn fw-semibold text-uppercase px-4 py-2" 
+             style="background-color:#0d6efd; color:#fff; border-radius:6px 0 0 6px;">
+             Enquire 
+          </a>
+          <a href="contactus.pdf" target="_blank" class="btn fw-semibold text-uppercase px-4 py-2"
+             style="border:1px solid #0d6efd; color:#0d6efd; border-radius:0 6px 6px 0;">
+             Brochure
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main class="main">
+
+<!-- ======= Product Section ======= -->
+<section id="products" class="products-section py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header text-center mb-5">
+      <h2 class="fw-bold text-primary">Our Products</h2>
+      <p>Explore our range of durable and high-performance pallets designed for every industry.</p>
+    </div>
+
+    <div class="row gy-4">
+      
+      <!-- Product Card 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://cpimg.tistatic.com/05368571/b/7/Four-Way-Perforated-Top-Export-Pallets.jpg" class="img-fluid" alt="Plastic Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">SAF-1111</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>Dimensions:</strong> 1200 x 1000 x 160 mm</li>
+              <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://m.media-amazon.com/images/I/61WI-p6FGmL.jpg" class="img-fluid" alt="Solid Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">SAF-1210</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+             <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4AFzRYx9KJ7fGgZOFuPylps1ngXOPZaagRw&s" class="img-fluid" alt="Perforated Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">JUMBO PALLETS</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQz27QufU-Y8AiOqHIMwB8ggEVKnZr_HnC1oa7qMBQpMTy81AZA" class="img-fluid" alt="Perforated Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">Pallet Type Containers</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqyuo6vy7kXAk_V3WcfLeibalobHe1hZpHw&s" class="img-fluid" alt="Perforated Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">Foldable Lid Containers</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+
+
+         <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card product-card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+          <div class="product-img bg-dark">
+            <img src="https://cpimg.tistatic.com/11040614/b/4/Shuttle-Pallet-Racking-System..jpg" class="img-fluid" alt="Perforated Pallet">
+          </div>
+          <div class="card-body p-4">
+            <h5 class="fw-bold text-primary mb-2">SHUTTLE RACKING PALLETS</h5>
+            <ul class="list-unstyled small text-muted mb-3">
+              <li><strong>Static Load:</strong> 1200 kg</li>
+              <li><strong>Dynamic Load:</strong> 11000 kg</li>
+              <li><strong>Racking Load:</strong> 700 kg</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Enquiry Now</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- End Product Section -->
+
+<!-- ======= MIPS Process Section (Blue Theme) ======= -->
+<section id="process" class="process-section py-5 bg-white">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header text-center mb-5">
+      <h2 class="fw-bold text-primary">Process to Start with MIPS</h2>
+      <p class="text-muted">
+        Starting your rental partnership with MIPS is simple and transparent. Here’s how the process works:
+      </p>
+    </div>
+
+    <div class="process-steps d-flex flex-wrap justify-content-center align-items-center gap-4">
+      
+      <!-- Step 1 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="circle">
+          <h6>CONSULTATION</h6>
+        </div>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="circle">
+          <h6>PALLET SELECTION</h6>
+        </div>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="300">
+        <div class="circle">
+          <h6>RENTAL AGREEMENT</h6>
+        </div>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="400">
+        <div class="circle">
+          <h6>DELIVERY</h6>
+        </div>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="500">
+        <div class="circle">
+          <h6>USE & MAINTENANCE</h6>
+        </div>
+        <div class="arrow"></div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="process-step text-center" data-aos="zoom-in" data-aos-delay="600">
+        <div class="circle">
+          <h6>RETURN</h6>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+<footer id="footer" class="footer dark-background text-white">
+
+  <div class="container footer-top py-5">
+    <div class="row gy-4">
+
+      <!-- About Section -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <span class="sitename">MIPS - My Pooling Solutions</span>
+        </a>
+        <p>
+          At MIPS Plastics, we help supply chains reduce costs, save time, and enhance customer satisfaction. Our integrated suite of products & services provides transportation, storage management, distribution, and warehousing solutions across India.
+        </p>
+        <div class="social-links d-flex mt-3">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Pallet Pooling</a></li>
+          <li><a href="#">Reusable Pallets</a></li>
+          <li><a href="#">FLC Containers</a></li>
+          <li><a href="#">Logistics & Warehousing</a></li>
+          <li><a href="#">SmartCycle System</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>
+          No. 3/95 A, Gangai Koil Street,<br>
+          Redhills, Chennai - 600052,<br>
+          Tamil Nadu, India
+        </p>
+        <p class="mt-3"><strong>Phone:</strong><br>
+          +91 98846 88855<br>
+          +91 44 6644 4444<br>
+          1800 5727 344
+        </p>
+        <p><strong>Email:</strong><br>
+          <a href="mailto:mips@mipsplastics.in" class="text-white">mips@mipsplastics.in</a><br>
+          <a href="mailto:info@mipsplastics.in" class="text-white">info@mipsplastics.in</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container text-center mt-4 py-3 border-top border-secondary">
+    <p class="mb-0">
+      <strong class="sitename">2025 MIPS Plastics</strong>. All Rights Reserved.
+    </p>
+    <div class="credits mt-1">
+      Designed by <a href="#" class="text-white">DHK</a>
+    </div>
+  </div>
+
+</footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

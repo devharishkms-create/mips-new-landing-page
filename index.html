@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MIPS Rental Pallets</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Favicons -->
+  <link href="https://mipsplastics.in/img/marine-logo-white.png" rel="icon" />
+  <link href="https://mipsplastics.in/img/marine-logo-white.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&family=Ubuntu:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+  <!-- Main CSS File (kept original CSS then added animation helpers) -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    /* --- Preserve original font intentions while centralizing to Poppins --- */
+    body,
+    section {
+      font-family: 'Poppins', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #223;
+    }
+
+    /* --- Existing highlights / helpers (kept) --- */
+    .highlight-blue {
+      background-color: #00b4d8;
+      color: #fff;
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .highlight-green {
+      background-color: #9be15d;
+      color: #000;
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    /* --- Hover micro-interactions kept & improved --- */
+    #plastic-vs-wooden img {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    #plastic-vs-wooden img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Values Section */
+    #values .icon-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #0066d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+    }
+
+    #values .icon-circle i {
+      color: #fff;
+      font-size: 42px;
+    }
+
+    /* Stats Section */
+    #stats h2 {
+      color: #0066cc;
+    }
+
+    #stats .divider {
+      width: 1px;
+      height: 80px;
+      background: #d0d0d0;
+    }
+
+    #stats .stat-item {
+      min-width: 200px;
+    }
+
+    @media (max-width: 768px) {
+      #stats .divider {
+        display: none;
+      }
+
+      #stats .stat-item {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Get Started Section: kept but fine-tuned */
+    #get-started {
+      background: url('assets/img/contact.jpg') no-repeat center center/cover;
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #get-started .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 50, 150, 0.4);
+      z-index: 1;
+      backdrop-filter: blur(1px);
+    }
+
+    #get-started .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      max-width: 900px;
+    }
+
+    #get-started h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      margin-bottom: .6rem;
+      letter-spacing: -0.5px;
+    }
+
+    #get-started p {
+      color: #f0f0f0;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    #get-started .btn-primary {
+      background-color: #007bff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: 0.3s;
+      box-shadow: 0 6px 18px rgba(0, 123, 255, 0.18);
+    }
+
+    #get-started .btn-primary:hover {
+      background-color: #0056cc;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 86, 204, 0.26);
+    }
+
+    @media (max-width: 768px) {
+      #get-started {
+        height: 60vh;
+      }
+
+      #get-started h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Additional refined components styles (kept as original but tuned) */
+    .lighter-loads-section {
+      background-color: #f8fbff;
+    }
+
+    .lighter-loads-section h2 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
+    }
+
+    .lighter-loads-section p {
+      line-height: 1.7;
+    }
+
+    .lighter-loads-section .btn-outline-primary {
+      border: 2px solid #0077b6;
+      color: #0077b6;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .lighter-loads-section .btn-outline-primary:hover {
+      background-color: #0077b6;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .lighter-loads-section img {
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    /* Services & Values: cards */
+    .service-card {
+      border-radius: 15px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      transition: all 0.35s cubic-bezier(.2,.9,.2,1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      background: linear-gradient(145deg, #007bff, #00b4d8);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(3, 100, 170, 0.12);
+    }
+
+    .service-card:hover h5,
+    .service-card:hover p,
+    .service-card:hover i {
+      color: #fff !important;
+    }
+
+    .service-card .icon-box {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: rgba(0, 123, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.35s ease;
+    }
+
+    .service-card:hover .icon-box {
+      transform: scale(1.06);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .value-card {
+      border-radius: 15px;
+      background: #f8f9fa;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.12);
+    }
+
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #values::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(0, 123, 255, 0.05), rgba(0, 123, 255, 0));
+      z-index: 0;
+    }
+
+    /* Responsive 16:9 aspect ratio */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+    }
+
+    .video-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .video-container img:hover {
+      transform: scale(1.03);
+    }
+
+    #mips-feature h2 {
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- NEW: Animation helper classes & micro-animations ---------- */
+
+    /* subtle floating decorative */
+    .float-up {
+      transform: translateY(6px);
+      animation: floatUp 6s ease-in-out infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(6px);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+
+      100% {
+        transform: translateY(6px);
+      }
+    }
+
+    /* Button micro bounce for CTA */
+    .btn-cta {
+      transition: transform 0.28s cubic-bezier(.2,.9,.3,1), box-shadow 0.28s;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(2, 77, 255, 0.14);
+    }
+
+    /* Staggered children reveal utility for JS/GSAP or AOS fallback */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal-item.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stats counter style */
+    .stat-number {
+      font-weight: 700;
+      font-size: 2.7rem;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-caption {
+      color: #6b7280;
+      margin-top: .5rem;
+      font-size: .95rem;
+    }
+
+    /* Hero overlay motion */
+    .hero-foreground {
+      transform-origin: center;
+    }
+
+    /* subtle parallax background using pseudo layering */
+    .hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* small accessibility improvements */
+    a:focus {
+      outline: 3px solid rgba(0,123,255,0.12);
+      outline-offset: 2px;
+    }
+
+    /* tiny performance tweak: will-change hint for animated items */
+    .will-change-transform {
+      will-change: transform, opacity;
+    }
+
+    /* keep existing responsive tweaks */
+    @media (max-width: 768px) {
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+
+     @media (max-width: 991px) {
+    #header .branding .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #header .navmenu ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    #header .btn {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  }
+
+    #testimonials .testimonial-box {
+    transition: all 0.3s ease-in-out;
+  }
+  #testimonials .testimonial-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  }
+  #testimonials .play-overlay i {
+    transition: transform 0.3s ease;
+  }
+  #testimonials .testimonial-box:hover .play-overlay i {
+    transform: scale(1.1);
+  }
+
+    :root {
+    --mips-blue: #0066ff; /* Adjust if you want a darker/lighter brand blue */
+    --mips-blue-dark: #004fd1;
+  }
+
+  .mipslogo {
+    height: 60px;
+    width: auto;
+  }
+
+  .nav-link {
+    color: #212529;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--mips-blue);
+  }
+
+  .btn-mips {
+    background: var(--mips-blue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+  }
+  .btn-mips:hover {
+    background: var(--mips-blue-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-mips {
+    border: 2px solid var(--mips-blue);
+    color: var(--mips-blue);
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+  }
+  .btn-outline-mips:hover {
+    background: var(--mips-blue);
+    color: #fff;
+  }
+
+  /* Adjust spacing on smaller screens */
+  @media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .navbar-collapse {
+      margin-top: 0.5rem;
+    }
+  }
+  
+
+  .floating-btn {
+    animation: floatY 2.5s ease-in-out infinite;
+  }
+
+  @keyframes floatY {
+    0%, 100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, -10px);
+    }
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float i {
+    line-height: 1;
+  }
+
+  /* Optional pulse animation for attention */
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+
+  .whatsapp-float {
+    animation: pulse 2s infinite;
+  }
+
+  </style>
+</head>
+
+<body class="index-page">
+
+<!-- Professional Responsive Header -->
+<!-- Bootstrap 5 CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Header -->
+<header id="header" class="header sticky-top bg-white shadow-sm">
+  <!-- Topbar -->
+  <div class="topbar py-1" style="background-color:#0d6efd;">
+    <div class="container d-flex flex-wrap justify-content-center justify-content-md-between align-items-center text-white small">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope me-2"></i>
+        <a href="mailto:info@mipsplastics.in" class="text-white text-decoration-none me-4">info@mipsplastics.in</a>
+        <i class="bi bi-phone me-2"></i>
+        <span>+91 98846 88855</span>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="text-white ms-3"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white ms-3"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/MIPS LOGO (229 x 67 px) (1).png" alt="MIPS Plastics" width="110">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-1 text-primary"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+        <ul class="navbar-nav align-items-center me-lg-4">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="whymips.html">Why MIPS?</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+          <li class="nav-item"><a class="nav-link" href="plasticvswooden.html">Plastic vs Wooden Pallets</a></li>
+          <li class="nav-item"><a class="nav-link" href="investor.html">Investor Room</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Buttons side by side -->
+        <div class="d-flex align-items-center">
+          <a href="contactus.html" class="btn fw-semibold text-uppercase px-4 py-2" 
+             style="background-color:#0d6efd; color:#fff; border-radius:6px 0 0 6px;">
+             Enquire 
+          </a>
+          <a href="contactus.pdf" target="_blank" class="btn fw-semibold text-uppercase px-4 py-2"
+             style="border:1px solid #0d6efd; color:#0d6efd; border-radius:0 6px 6px 0;">
+             Brochure
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+<section id="hero" class="position-relative" style="padding:0;">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" aria-label="Hero carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Contact Us Slide"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <!-- Carousel slides -->
+    <div class="carousel-inner">
+      
+
+      <!-- Contact Us Slide -->
+      <div class="carousel-item active position-relative">
+        <img src="assets/img/How MIPS PILOT (2).png" class="d-block w-100 img-fluid" alt="Contact Us Slide">
+
+        <!-- Overlay for contrast -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
+
+        <!-- Floating Contact Button (bottom-center) -->
+        <a href="#contact" 
+           class="btn btn-warning text-dark fw-semibold position-absolute start-50 translate-middle-x mb-4 px-4 py-2 rounded-pill shadow floating-btn"
+           style="bottom: 30px;">
+           Contact Us
+        </a>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <img src="assets/img/banner3.png" class="d-block w-100 img-fluid" alt="Slide 2">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous slide">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next slide">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span> 
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</section>
+
+    <!-- Why MIPS Section -->
+    <!-- <section id="about" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <p class="text-uppercase text-muted mb-2">Why MIPS?</p>
+        <h2 class="display-6 fw-bold text-primary mb-3">Leading the Way in Sustainable Pallet Solutions</h2>
+        <p class="lead text-muted">
+          MIPS combines operational excellence with environmental responsibility, ensuring reliable pallet solutions that reduce cost, time, and carbon footprint.
+        </p>
+      </div>
+    </section> -->
+
+    <!-- MIPS Supply Chain Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #002B5B, #003366);">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Section -->
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h2 class="text-white fw-bold text-primary mb-4">
+              Best-in-Class <br />
+              Solutions for your <br />
+              Supply Chain
+            </h2>
+            <p class="text-white fs-5">
+              At <strong>MIPS</strong>, we help supply chains reduce costs, save time, and enhance customer satisfaction.
+              Our integrated suite of products &amp; services provides transportation, storage management,
+              distribution, and warehousing solutions across the country.
+            </p>
+          </div>
+
+          <!-- Cards Section -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="120">
+                <div class="card shadow-sm border-0 h-100">
+                  <img src="assets/img/services.png" class="card-img-top" alt="MIPS Services" />
+                  <div class="card-body">
+                    <h5 class="fw-bold text-primary">Services</h5>
+                    <p class="text-muted small">
+                      Custom-tailored services that best fit your supply chain needs.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm rounded-pill px-3 btn-cta">Learn More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-sm border-0 h-100">
+                  <img src="assets/img/products.png" class="card-img-top" alt="MIPS Products" />
+                  <div class="card-body">
+                    <h5 class="fw-bold text-primary">Products</h5>
+                    <p class="text-muted small">
+                      Our products are the backbone of all modern supply chain businesses.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm rounded-pill px-3 btn-cta">Explore →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section (hidden as original) -->
+    <section id="product" class="py-5 bg-white" style="display: none;">
+      <div class="container" data-aos="fade-up">
+        <p class="text-uppercase text-muted mb-2">Our Products</p>
+        <h2 class="fw-bold display-6 mb-3">Reusable Pallets & FLC Solutions</h2>
+        <div class="row gy-4">
+          <div class="col-md-4 text-center">
+            <img src="https://media.licdn.com/dms/image/v2/D5612AQE0bFhvais69g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657875182027?e=2147483647&v=beta&t=cu0w9Li3dw318ea7aNWzBWXUhd20TryAY1Dgh8ThJIk" class="img-fluid mb-3" alt="Plastic Pallets">
+            <h5 class="fw-bold">Plastic Pallets</h5>
+            <p class="text-muted">High durability, lightweight, and fully reusable.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://media.licdn.com/dms/image/v2/C5612AQGC8bC3Pq08hA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1566548574662?e=2147483647&v=beta&t=AtrayknWON8kachdKABZRU14DSTnUeQbZtxhm0GpJxQ" class="img-fluid mb-3" alt="FLC Containers">
+            <h5 class="fw-bold">FLC Containers</h5>
+            <p class="text-muted">Flexible logistics containers designed for safe transport.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://allpallet.net/wp-content/uploads/2025/03/heavy-duty-plastic-pallets-9-1.jpg" class="img-fluid mb-3" alt="SmartCycle System">
+            <h5 class="fw-bold">SmartCycle System</h5>
+            <p class="text-muted">Optimized pooling and reuse for cost and emission savings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light" style="display: none;">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5">
+          <p class="text-uppercase text-muted mb-2">Our Services</p>
+          <h2 class="fw-bold text-primary display-6">Comprehensive Pallet Management</h2>
+          <p class="text-muted mt-3">
+            MIPS provides complete pallet lifecycle solutions — from logistics to maintenance — ensuring reliability, sustainability, and efficiency.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-card p-4 text-center h-100 reveal-item">
+              <div class="icon-box mb-3">
+                <i class="bi bi-truck fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark mb-2">End-to-End Logistics</h5>
+              <p class="text-muted small mb-0">
+                Seamless pallet logistics and pooling for optimized supply chain flow.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-card p-4 text-center h-100 reveal-item">
+              <div class="icon-box mb-3">
+                <i class="bi bi-tools fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark mb-2">Inspection & Repair</h5>
+              <p class="text-muted small mb-0">
+                Routine inspection and repair services to keep pallets in top condition.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+            <div class="service-card p-4 text-center h-100 reveal-item">
+              <div class="icon-box mb-3">
+                <i class="bi bi-box-seam fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark mb-2">Inventory Tracking</h5>
+              <p class="text-muted small mb-0">
+                Efficient management and real-time tracking of pallet inventory.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="320">
+            <div class="service-card p-4 text-center h-100 reveal-item">
+              <div class="icon-box mb-3">
+                <i class="bi bi-bar-chart-line fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark mb-2">Scalable Rentals</h5>
+              <p class="text-muted small mb-0">
+                Flexible pallet rental solutions that grow with your business demand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redesigned Values Section -->
+    <section id="values" class="py-5 bg-white position-relative">
+      <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5">
+          <!-- <p class="text-uppercase text-muted mb-2">Our Values</p> -->
+          <h2 class="fw-bold text-primary display-6">What Drives MIPS Forward</h2>
+          <p class="text-muted mt-3">
+            Our values define who we are and how we deliver superior solutions to our partners every day.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Value Card 1 -->
+          <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+            <div class="value-card text-center p-4 h-100 reveal-item">
+              <div class="icon-circle mb-3 bg-primary bg-opacity-10">
+                <i class="bi bi-box-seam text-primary fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark">Quality</h5>
+              <p class="text-muted small mb-0">
+                We inspect, clean, and repair every pallet on every cycle through our depots.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 2 -->
+          <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="160">
+            <div class="value-card text-center p-4 h-100 reveal-item">
+              <div class="icon-circle mb-3 bg-primary bg-opacity-10">
+                <i class="bi bi-truck text-primary fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark">Service</h5>
+              <p class="text-muted small mb-0">
+                We consistently deliver pallets on time and provide responsive service.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 3 -->
+          <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="220">
+            <div class="value-card text-center p-4 h-100 reveal-item">
+              <div class="icon-circle mb-3 bg-primary bg-opacity-10">
+                <i class="bi bi-check2-square text-primary fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark">Simplicity</h5>
+              <p class="text-muted small mb-0">
+                We make it easy to order, track, and pay for pallets — saving you time and money.
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 4 -->
+          <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="280">
+            <div class="value-card text-center p-4 h-100 reveal-item">
+              <div class="icon-circle mb-3 bg-primary bg-opacity-10">
+                <i class="bi bi-cone-striped text-primary fs-1"></i>
+              </div>
+              <h5 class="fw-bold text-dark">Safety</h5>
+              <p class="text-muted small mb-0">
+                MIPS’s high-quality pallets help protect the safety of people and products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- CAPEX vs OPEX Section -->
+<section id="capex-opex" class="py-5" style="background: linear-gradient(135deg, #E6F2FF, #DDEEFF);">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="fw-bold text-primary mb-3">CAPEX VS OPEX</h2>
+    <p class="text-muted mb-5">Comparison between Purchase Model (CAPEX) and Rental Model with MIPS (OPEX)</p>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle shadow-sm bg-white">
+        <thead class="table-primary">
+          <tr>
+            <th class="text-start">Category</th>
+            <th>CAPEX (Purchase Model)</th>
+            <th>OPEX (Rental Model with MIPS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-start fw-semibold">
+              <i class="bi bi-currency-rupee text-primary me-2"></i>Investment Type
+            </td>
+            <td>Large upfront capital required</td>
+            <td>No upfront cost, pay only as you use</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold">
+              <i class="bi bi-gear text-primary me-2"></i>Asset Ownership & Maintenance
+            </td>
+            <td>You own and maintain all assets</td>
+            <td>MiPS owns and manages assets for you, fully serviced</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold">
+              <i class="bi bi-graph-up text-primary me-2"></i>Financial Flexibility
+            </td>
+            <td>Fixed assets depreciate, limited agility</td>
+            <td>Operational expense, enhances cash flow & tax efficiency</td>
+          </tr>
+          <tr>
+            <td class="text-start fw-semibold">
+              <i class="bi bi-arrow-repeat text-primary me-2"></i>Scalability & Sustainability
+            </td>
+            <td>Hard to scale, possible idle inventory</td>
+            <td>Easily scalable, supports sustainable operations</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+    <!-- Sustainability Section -->
+<section id="sustainability" class="py-5 bg-white text-center">
+  <div class="container" data-aos="fade-up">
+    <p class="text-uppercase mb-2">
+      <span class="fw-bold" style="color:#007bff; font-size:1.5rem;">SUSTAINABLE SOLUTIONS</span>
+    </p>
+    <h2 class="fw-bold display-6">
+      Good for <span class="highlight-blue">business</span>. Good for <span class="highlight-green">the planet</span>.
+    </h2>
+    <p class="lead text-muted mt-3">
+      We are committed to embedding sustainability into all operations, creating long-term value for stakeholders.
+    </p>
+    <p class="mt-3">
+      Switch to our sustainable pooling and reusable packaging solutions. Our SmartCycle pooling system reduces waste, CO<sub>2</sub> emissions, and drives cost savings. Our reusable <strong>Pallets & FLC</strong> solutions are durable, fully tracked, and safe for your products.
+    </p>
+  </div>
+</section>
+
+
+    <!-- Stats Section (with animated counters) -->
+    <section id="stats" class="py-5 bg-white"  style="background: linear-gradient(135deg, #E6F2FF, #DDEEFF);">
+      <div class="container">
+        <div class="row text-center justify-content-center align-items-stretch gy-4">
+          <div class="col-12 col-md-3">
+            <div class="stat-item h-100 px-3 border-end border-light" data-aos="zoom-in">
+              <div class="stat-number" data-target="15">0</div>
+              <p class="stat-caption">15 + years of experience in Pallet industry</p>
+            </div>
+          </div>
+
+        <div class="col-12 col-md-3">
+  <div class="stat-item h-100 px-3 border-end border-light" data-aos="zoom-in" data-aos-delay="80">
+    <div class="stat-number" data-target="25"></div>
+    <p class="stat-caption">25+ Industries served</p>
+  </div>
+</div>
+
+
+          <div class="col-12 col-md-3">
+            <div class="stat-item h-100 px-3 border-end border-light" data-aos="zoom-in" data-aos-delay="160">
+              <div class="stat-number" data-target="72">0</div>
+              <p class="stat-caption">Reliable Pallet Supply</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="stat-item h-100 px-3" data-aos="zoom-in" data-aos-delay="240">
+              <div class="stat-number" data-target="15">0</div>
+              <p class="stat-caption">Point Quality Inspection</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section id="video" class="py-5 bg-light text-center">
+      <div class="container" data-aos="fade-up">
+        <h2 class="fw-bold text-primary mb-3">Watch Our Story</h2>
+        <p class="text-muted mb-4">Learn more about how MIPS delivers smarter pallet solutions.</p>
+
+        <!-- Responsive YouTube Embed -->
+        <div class="ratio ratio-16x9 mx-auto shadow-lg rounded-3 overflow-hidden" style="max-width: 900px;">
+          <img src="https://www.sociallybold.com/wp-content/uploads/2016/02/Video-Placeholder.jpg" alt="youtube video placeholder">
+        </div>
+
+        <p class="mt-4 text-secondary small">
+          Watch the full story on our official
+          <a href="https://youtu.be/POPzIHHN4Vs" target="_blank" class="text-decoration-none fw-semibold text-primary">MIPS YouTube Channel</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+<section id="testimonials" class="py-5"  style="background: linear-gradient(135deg, #E6F2FF, #DDEEFF);">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Client Testimonials</h2>
+    <p class="text-muted mx-auto" style="max-width: 750px;">
+      We are the proud providers of asset pooling services in India, but often it’s not just about what we do—it’s about how we do it. 
+      Don’t just take our word for it; watch what our esteemed clients have to say.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <!-- Testimonial 1 -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="testimonial-box bg-white rounded-4 shadow-sm overflow-hidden position-relative">
+          <a href="https://www.youtube.com/watch?v=yourvideo1" target="_blank" class="d-block position-relative">
+            <img src="https://www.sociallybold.com/wp-content/uploads/2016/02/Video-Placeholder.jpg" class="img-fluid w-100" alt="LUMAX Testimonial">
+            <div class="play-overlay position-absolute top-50 start-50 translate-middle text-center">
+              <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+              <p class="fw-bold text-dark mt-2 mb-0">TESTIMONY BY <span class="text-danger">CLIENT</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="testimonial-box bg-white rounded-4 shadow-sm overflow-hidden position-relative">
+          <a href="https://www.youtube.com/watch?v=yourvideo2" target="_blank" class="d-block position-relative">
+            <img src="https://www.sociallybold.com/wp-content/uploads/2016/02/Video-Placeholder.jpg" class="img-fluid w-100" alt="Hind Terminals Testimonial">
+            <div class="play-overlay position-absolute top-50 start-50 translate-middle text-center">
+              <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+              <p class="fw-bold text-dark mt-2 mb-0">TESTIMONY BY <span class="text-success">CLIENT</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="testimonial-box bg-white rounded-4 shadow-sm overflow-hidden position-relative">
+          <a href="https://www.youtube.com/watch?v=yourvideo3" target="_blank" class="d-block position-relative">
+            <img src="https://www.sociallybold.com/wp-content/uploads/2016/02/Video-Placeholder.jpg" class="img-fluid w-100" alt="Autoler Testimonial">
+            <div class="play-overlay position-absolute top-50 start-50 translate-middle text-center">
+              <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+              <p class="fw-bold text-dark mt-2 mb-0">TESTIMONY BY <span class="text-primary">CLIENT</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+        <div class="testimonial-box bg-white rounded-4 shadow-sm overflow-hidden position-relative">
+          <a href="https://www.youtube.com/watch?v=yourvideo4" target="_blank" class="d-block position-relative">
+            <img src="https://www.sociallybold.com/wp-content/uploads/2016/02/Video-Placeholder.jpg" class="img-fluid w-100" alt="Boxman Logistics Testimonial">
+            <div class="play-overlay position-absolute top-50 start-50 translate-middle text-center">
+              <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+              <p class="fw-bold text-dark mt-2 mb-0">TESTIMONY BY <span class="text-secondary">CLIENT</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- MIPS Lighter Loads Section -->
+    <section class="lighter-loads-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+
+                                            <h2 class="fw-bold text-primary mb-4 text-center">Plastic vs Wooden Pallets</h2>
+
+          <!-- Image Column -->
+          <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+            <img src="assets/img/woodvsplastic.png" alt="Truck transporting pallets" class="img-fluid rounded shadow">
+          </div>
+
+          <!-- Text Column -->
+          <div class="col-md-6 text-md-start text-center" data-aos="fade-left" data-aos-delay="120">
+
+            <h2 class="fw-bold display-6 mb-3 text-dark">
+              Lighter Loads <br> <span class="text-primary">Less Emissions</span>
+            </h2>
+            <p class="text-muted fs-5">
+              Compared to traditional wood block pallets which have a limited lifespan of 25 trips,
+              <strong>MIPS</strong> plastic pallets complete an average of 100 trips
+              (actual, not just lab tested) and have 28% less impact on global warming.
+            </p>
+            <p class="text-muted fs-6">
+              For every 100,000 <strong>MIPS</strong> pallets shipped, around 1,000 gallons of fuel are saved,
+              reducing more than 20,000 pounds of greenhouse emissions.
+            </p>
+            <a href="plasticvswooden.html" class="btn btn-outline-primary px-4 py-2 rounded-pill mt-3 btn-cta">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Started / Contact Us Section -->
+    <section id="get-started">
+      <div class="overlay"></div>
+      <div class="content" data-aos="zoom-in">
+        <h2>Ready to Partner with MIPS?</h2>
+        <p>Reach out today to explore our pallet pooling and reusable packaging solutions.</p>
+        <a href="#contact" class="btn btn-primary btn-lg btn-cta">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- WhatsApp Chat Button -->
+<a href="https://wa.me/919884688855" 
+   class="whatsapp-float d-flex align-items-center justify-content-center" 
+   target="_blank" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background text-white">
+
+    <div class="container footer-top py-5">
+      <div class="row gy-4">
+
+        <!-- About Section -->
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <span class="sitename">MIPS - My Pooling Solutions</span>
+          </a>
+          <p>
+            At MIPS Plastics, we help supply chains reduce costs, save time, and enhance customer satisfaction. Our integrated suite of products & services provides transportation, storage management, distribution, and warehousing solutions across India.
+          </p>
+          <div class="social-links d-flex mt-3">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Pallet Pooling</a></li>
+            <li><a href="#">Reusable Pallets</a></li>
+            <li><a href="#">FLC Containers</a></li>
+            <li><a href="#">Logistics & Warehousing</a></li>
+            <li><a href="#">SmartCycle System</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            No. 3/95 A, Gangai Koil Street,<br>
+            Redhills, Chennai - 600052,<br>
+            Tamil Nadu, India
+          </p>
+          <p class="mt-3"><strong>Phone:</strong><br>
+            +91 98846 88855<br>
+            +91 44 6644 4444<br>
+            1800 5727 344
+          </p>
+          <p><strong>Email:</strong><br>
+            <a href="mailto:mips@mipsplastics.in" class="text-white">mips@mipsplastics.in</a><br>
+            <a href="mailto:info@mipsplastics.in" class="text-white">info@mipsplastics.in</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container text-center mt-4 py-3 border-top border-secondary">
+      <p class="mb-0">
+        <strong class="sitename">2025 MIPS Plastics</strong>. All Rights Reserved.
+      </p>
+      <div class="credits mt-1">
+        Designed by <a href="#" class="text-white">DHK</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- --- Animation Libraries (CDN) --- -->
+  <!-- AOS is used for scroll reveals (lightweight, declarative) -->
+  <script>
+    /* Initialize AOS */
+    document.addEventListener('DOMContentLoaded', function () {
+      if (AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          mirror: false,
+          offset: 100,
+          easing: 'cubic-bezier(.2,.8,.2,1)',
+        });
+      }
+    });
+  </script>
+
+  <!-- Small custom JS for counters, reveal-in-view fallback, and a few motion touches -->
+  <script>
+    (function () {
+      // Utility: is element visible in viewport (for non-AOS features)
+      function isInViewport(el, offset = 0) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top + offset >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom - offset <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Simple counter animation (numbers)
+      function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(function (el) {
+          if (el.dataset.animated) return;
+          const target = parseInt(el.getAttribute('data-target') || '0', 10);
+          // When element is visible -> animate
+          const rect = el.getBoundingClientRect();
+          if (rect.top < (window.innerHeight || document.documentElement.clientHeight) - 60) {
+            el.dataset.animated = 'true';
+            const duration = 1600;
+            const start = performance.now();
+            const initial = 0;
+            function step(now) {
+              const progress = Math.min((now - start) / duration, 1);
+              // easeOutCubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const value = Math.floor(initial + (target - initial) * eased);
+              el.textContent = value.toLocaleString();
+              if (progress < 1) requestAnimationFrame(step);
+              else el.textContent = (target).toLocaleString();
+            }
+            requestAnimationFrame(step);
+          }
+        });
+      }
+
+      // Simple reveal when in viewport for elements with class 'reveal-item' (fallback/extra polish)
+      function revealInView() {
+        const items = document.querySelectorAll('.reveal-item');
+        items.forEach(function (item) {
+          if (item.classList.contains('in-view')) return;
+          const rect = item.getBoundingClientRect();
+          if (rect.top < (window.innerHeight || document.documentElement.clientHeight) - 80) {
+            item.classList.add('in-view');
+          }
+        });
+      }
+
+      // On load + scroll initialize counters and reveal items
+      window.addEventListener('load', function () {
+        animateCounters();
+        revealInView();
+
+        // small delayed chore to ensure AOS content triggers
+        setTimeout(function () {
+          animateCounters();
+          revealInView();
+        }, 600);
+      });
+
+      window.addEventListener('scroll', function () {
+        animateCounters();
+        revealInView();
+      });
+
+      // Mobile nav toggle (keeps original markup functional)
+      document.addEventListener('click', function (e) {
+        const t = e.target;
+        if (t.closest('.mobile-nav-toggle')) {
+          document.getElementById('navmenu').classList.toggle('open');
+        }
+      });
+
+      // Improve carousel focus accessibility: pause on hover
+      const heroCarousel = document.getElementById('heroCarousel');
+      if (heroCarousel) {
+        heroCarousel.addEventListener('mouseenter', function () {
+          try {
+            const carousel = bootstrap.Carousel.getInstance(heroCarousel);
+            if (carousel) carousel.pause();
+          } catch (err) {}
+        });
+        heroCarousel.addEventListener('mouseleave', function () {
+          try {
+            const carousel = bootstrap.Carousel.getInstance(heroCarousel);
+            if (carousel) carousel.cycle();
+          } catch (err) {}
+        });
+      }
+    })();
+  </script>
+
+  <!-- Local fallback for browsers without AOS: add small in-view class application -->
+  <script>
+    // If AOS didn't load, still apply simple reveal via IntersectionObserver
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      // check if AOS provided: if not, fallback
+      if (typeof AOS === 'undefined') {
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal-item, .stat-number, [data-aos]').forEach(function (el) {
+          io.observe(el);
+        });
+      }
+    })();
+  </script>
+
+  <!-- AOS script (placed at bottom to let CSS render earlier) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</body>
+</html>
